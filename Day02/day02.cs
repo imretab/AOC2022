@@ -14,6 +14,7 @@ namespace Day_02
             List<RPS> game = new List<RPS>();
             StreamReader sr = new StreamReader("input.txt");
             int sum = 0;
+            int sum2 = 0;
             while (!sr.EndOfStream)
             {
                 string[] seged = sr.ReadLine().Split(' ');
@@ -29,12 +30,15 @@ namespace Day_02
                         {
                             case 'X':
                                 sum += 4;
+                                sum2 += 3;
                                 break;
                             case 'Y':
                                 sum += 8;
+                                sum2 += 4;
                                 break;
                             case 'Z':
                                 sum += 3;
+                                sum2 += 8;
                                 break;
                         }
                         break;
@@ -42,13 +46,16 @@ namespace Day_02
                         switch (item.YourChoice)
                         {
                             case 'X':
-                                sum += 1;
+                                sum++;
+                                sum2++;
                                 break;
                             case 'Y':
                                 sum += 5;
+                                sum2 += 5;
                                 break;
                             case 'Z':
                                 sum += 9;
+                                sum2 += 9;
                                 break;
                         }
                         break;
@@ -57,19 +64,26 @@ namespace Day_02
                         {
                             case 'X':
                                 sum += 7;
+                                sum2 += 2;
                                 break;
                             case 'Y':
                                 sum += 2;
+                                sum2 += 6;
                                 break;
                             case 'Z':
                                 sum += 6;
+                                sum2 += 7;
                                 break;
                         }
                         break;
                 }
             }
-            Console.WriteLine(sum);
+
+            Console.WriteLine(sum2);
             Console.ReadKey();
+
+            }
         }
     }
-}
+
+
