@@ -78,7 +78,7 @@ namespace Day_02
                         break;
                 }
             }
-
+            Console.WriteLine(sum);
             Console.WriteLine(sum2);
             Console.ReadKey();
 
